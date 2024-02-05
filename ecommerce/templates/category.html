@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--banner-->
+<div class="container-fluid">
+    <img src="{% static 'images/banner.jpeg' %}" height="450px" width="100%">
+</div>
+
+<div class="container-fluid mt-3" style="margin-bottom:100px;">
+    <h3 class="text-center fw bold">Our Collections</h3>
+    <p style="text-align:justify;line-height:2;">Typically, collections pages don’t tend to get the love or focus they deserve from many eCommerce stores. I can say from experience that collection pages are some of the most visited pages that you’ll see within your eCommerce analytics.They play a major role in overall user experience and visitor/customer product discovery.
+
+Most visitors, especially if they’re new to your store, and regardless of what original acquisition source they came from, will go around and explore the different product options available that you have. It’s completely natural for people who have never come across your site before to explore what else you have on offer (I mean, you most likely do this as well)</p>
+</div>
+
+
+<!--<div class="container-fluid mt-3" style="margin-bottom:100px;">-->
+<!--    <div class="row">-->
+        {% for i in c %}
+<!--        <div class="col-sm-4">-->
+            <div class="card" style="width:18rem;">
+  <img src="{{i.image.url}}" height="200px" width="100%" class="card-img-top" alt="...">
+  <div class="card-body">
+   <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text"></p>
+    <a href="{%url 'shop:allproducts' i.name %} " class="btn btn-primary">Products</a>
+  </div>
+</div>
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+{% endfor %}
+
+{% endblock %}

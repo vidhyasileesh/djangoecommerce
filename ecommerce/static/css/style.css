@@ -1,0 +1,52 @@
+body
+{
+font-family: 'EB Garamond', serif;
+font-family: 'Slabo 27px', serif;
+background-color:#ccdbda;
+}
+
+.navbar-light .navbar-nav .nav-link
+{
+color:black;
+font-weight:bold;
+}
+
+.footer
+{
+height:40px;
+width:100%;
+text-align:center;
+background-color:lightgrey;
+position:fixed;
+bottom:0%;
+left:0%
+
+}
+
+.card{
+display:inline-block;
+margin-top:30px;
+margin-left: 150px;
+width:300px;
+box-shadow: 0 0px 8px #211f1f;
+transition: transform 0.5s ease-in-out;
+
+}
+
+.card:hover
+{
+transform:translateY(-10px);
+}
+
+.form-control
+{
+width:30%;
+}
+
+.card h5
+{
+text-align:center;
+}
+
+
+
